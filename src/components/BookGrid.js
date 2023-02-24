@@ -31,7 +31,7 @@ const BookGrid = () => {
           onChange={(e) => handleChange(e)}
         />
       </div>
-      <div className=" grid grid-cols-1 gap-8 lg:grid-cols-4">
+      <div className=" grid grid-cols-1 gap-14 lg:grid-cols-5">
         {bookService.booksToDisplay(data, filter).map((book) => (
           <Card name={book.name} details={book.details} id={book.id} />
         ))}
