@@ -4,10 +4,8 @@ import bookService from "../services/books";
 import searchIcon from "../assets/search.svg";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
-
-
 const BookGrid = () => {
-    const [parent, enableAnimations] = useAutoAnimate();
+  const [parent, enableAnimations] = useAutoAnimate();
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState("");
   const [show, setShow] = useState(false);
@@ -25,7 +23,6 @@ const BookGrid = () => {
   const showSearch = (e) => {
     setShow(!show);
     this.focus();
-    
   };
 
   return (

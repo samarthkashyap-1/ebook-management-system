@@ -10,7 +10,10 @@ function App() {
   const [parent, enableAnimations] = useAutoAnimate();
 
   return (
-    <div className="bg-gray-900 h-screen text-white lg:px-14 " ref={parent}>
+    <div
+      className="bg-gray-900 h-screen overflow-auto scrollbar-hide text-white lg:px-14 "
+      ref={parent}
+    >
       <Routes>
         <Route
           path="/"

@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import cover from "../assets/alchemist.jpg";
 
-
 const Bookpage = () => {
-  const {id} = useParams();
+  const { id } = useParams();
   const [bookData, setBookData] = useState({
     id: 0,
     name: "",
