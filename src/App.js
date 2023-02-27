@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import Bookpage from "./components/Bookpage";
 import About from "./pages/About";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import Landing from "./pages/Landing";
+import Error from "./pages/Error";
 
 function App() {
   const [parent, enableAnimations] = useAutoAnimate();
@@ -15,8 +17,9 @@ function App() {
       ref={parent}
     >
       <Routes>
+        <Route path="/" element={<Landing />} />
         <Route
-          path="/"
+          path="/books"
           element={
             <>
               <Navbar />
@@ -26,6 +29,7 @@ function App() {
         />
         <Route path="/about" element={<About />} />
         <Route path="/books/:id" element={<Bookpage />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );
